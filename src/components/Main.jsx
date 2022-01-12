@@ -28,6 +28,7 @@ function Main() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
+           
             let bestFeatures = Array.from(e.target.bestFeatures)
               .filter((input) => input.checked)
               .map((input) => input.value);
@@ -70,6 +71,7 @@ function Main() {
                 timeSpent: timeSpent,
               },
             ]);
+            e.target.reset()
           }}
           className="form"
         >
@@ -80,26 +82,26 @@ function Main() {
             </h3>
             <ul>
               <li>
-                <label>
-                  <input name="bestFeatures" type="checkbox" value="colour" />
+                <label htmlFor="bf1">
+                  <input name="bestFeatures" id="bf1" type="checkbox" value="colour" />
                   It's yellow!
                 </label>
               </li>
               <li>
-                <label>
-                  <input name="bestFeatures" type="checkbox" value="sound" />
+                <label htmlFor="bf2">
+                  <input name="bestFeatures" id="bf2" type="checkbox" value="sound" />
                   It squeaks!
                 </label>
               </li>
               <li>
-                <label>
-                  <input name="bestFeatures" type="checkbox" value="logo" />
+                <label htmlFor="bf3">
+                  <input name="bestFeatures" id="bf3" type="checkbox" value="logo" />
                   It has a logo!
                 </label>
               </li>
               <li>
-                <label>
-                  <input name="bestFeatures" type="checkbox" value="size" />
+                <label htmlFor="bf4">
+                  <input name="bestFeatures" id="bf4" type="checkbox" value="size" />
                   Its big!
                 </label>
               </li>
